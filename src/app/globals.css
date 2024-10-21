@@ -24,4 +24,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .shape-outside-ellipse {
+    float: right;
+    overflow: hidden;
+    clip-path: ellipse(100% 100% at 100% 30%);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+  }
 }
