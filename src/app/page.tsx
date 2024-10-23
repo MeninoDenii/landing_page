@@ -30,13 +30,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Card } from "@/components/Card/Card";
+import { mock } from "@/lib/mock";
 
 export default function Home() {
   return (
     <div>
       {/* First Section */}
       <section className=" px-4 lg:px-0">
-        <header className="relative flex items-center justify-between pl-4 lg:w-full lg:py-8 lg:pl-20 lg:sticky">
+        <header className="relative  flex items-center justify-between pl-4 lg:w-full lg:py-6 lg:pl-20 lg:sticky">
           <div className="lg:flex lg:items-center lg:gap-[38px]">
             <h2 className="font-bold text-[32px]">soller</h2>
             <nav className="hidden lg:flex lg:gap-4 lg:items-center">
@@ -87,7 +89,7 @@ export default function Home() {
                 className="w-full hidden lg:flex lg:sticky"
               >
                 Request a Quote
-                <ArrowRightIcon />
+                <ArrowRightIcon className="animate-bounce" />
               </Button>
             </div>
           </div>
@@ -99,14 +101,14 @@ export default function Home() {
               Get the Sun to <br className="hidden lg:block" /> Power Your Home
             </h1>
             <p className="text-lg text-center lg:text-2xl lg:text-start">
-              Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus
-              <br className="hidden lg:block" />
-              viverra orci dui consequat turpis scelerisque.
+              Viverra viverra nibh enim et aliquam, enim. Tempor, sit
+              <br className="hidden lg:block" /> mus viverra orci dui consequat
+              turpis scelerisque.
             </p>
 
             <Button variant="outline" size="lg" className="w-full">
               Request a Quote
-              <ArrowRightIcon />
+              <ArrowRightIcon className="animate-bounce" />
             </Button>
 
             <div className="mt-8 pr-4 pl-4 flex flex-col gap-4 lg:mt-32">
@@ -157,7 +159,11 @@ export default function Home() {
             alt="Ellipse Amarela"
             className="absolute top-[170px]"
           />
-          <Image src={Desktop} alt="Desktop" className="absolute mt-16 z-50" />
+          <Image
+            src={Desktop}
+            alt="Desktop"
+            className="absolute mt-16 z-50 animate-fadeIn"
+          />
           <Image
             src={Ellipse15}
             alt="Ellipse lilás"
@@ -174,7 +180,7 @@ export default function Home() {
           <Image
             src={ScreenDesktop}
             alt="Desktop"
-            className="absolute mt-20 z-50 flex left-32"
+            className="absolute mt-20 z-50 flex left-32 animate-fadeIn"
           />
 
           <Image
@@ -277,7 +283,7 @@ export default function Home() {
               Powerful features
             </h1>
 
-            <p className="mt-6 lg:mt-0 lg:text-xl">
+            <p className="mt-6 lg:mt-0">
               Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et
               et. Auctor turpis semper id sit ornare maecenas lectus sed.
             </p>
@@ -362,176 +368,18 @@ export default function Home() {
           </div>
           <Button variant="secondary" size="lg" className="w-full">
             Request a Quote
-            <ArrowRightIcon />
+            <ArrowRightIcon className="animate-bounce" />
           </Button>
         </div>
         <div className="mx-auto max-w-2xl mt-16 w-full lg:flex lg:items-start lg:max-w-full lg:pl-20 lg:mt-20 lg:pb-20">
           <Carousel className="w-full max-w-2xl lg:max-w-full">
             <CarouselContent className="lg:flex items-center gap-6">
-              <CarouselItem className="lg:basis-1/5">
-                <div className="bg-white w-full rounded-xl lg:w-[364px] lg:max-h-[490px]">
-                  <div className=" flex flex-col gap-4 justify-center px-7 pt-[112px] pb-7 text-left lg:px-8 lg:pb-14 lg:pt-[136px] lg:gap-6">
-                    <p>
-                      Purus maecenas quis elit eu, aliquet. Tellus porttitor ut
-                      sollicitudin sit non fringilla. Quam nunc volutpat
-                      senectus neque eget amet pharetra, euismod. Tempus, nunc,
-                      molestie imperdiet curabitur commodo euismod.
-                    </p>
-                    <figure className="flex items-center gap-4">
-                      <Image
-                        src={Avatar}
-                        alt="Rwanda Melfor"
-                        className="rounded-full flex items-center justify-center h-16 w-16 object-center object-cover"
-                      />
-                      <figcaption>
-                        <h2 className="text-lg text-[#0F172A]">
-                          Rwanda Melfor
-                        </h2>
-                        <h3 className="text-base text-[#475569]">
-                          zerowaste.com
-                        </h3>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </CarouselItem>
-              <CarouselItem className="lg:basis-1/5">
-                <div className="bg-white w-full rounded-xl lg:w-[364px] lg:max-h-[490px]">
-                  <div className=" flex flex-col gap-4 justify-center px-7 pt-[112px] pb-7 text-left lg:px-8 lg:pb-14 lg:pt-[136px] lg:gap-6">
-                    <p>
-                      Purus maecenas quis elit eu, aliquet. Tellus porttitor ut
-                      sollicitudin sit non fringilla. Quam nunc volutpat
-                      senectus neque eget amet pharetra, euismod. Tempus, nunc,
-                      molestie imperdiet curabitur commodo euismod.
-                    </p>
-                    <figure className="flex items-center gap-4">
-                      <Image
-                        src={Avatar}
-                        alt="Rwanda Melfor"
-                        className="rounded-full flex items-center justify-center h-16 w-16 object-center object-cover"
-                      />
-                      <figcaption>
-                        <h2 className="text-lg text-[#0F172A]">
-                          Rwanda Melfor
-                        </h2>
-                        <h3 className="text-base text-[#475569]">
-                          zerowaste.com
-                        </h3>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </CarouselItem>
-              <CarouselItem className="lg:basis-1/5">
-                <div className="bg-white w-full rounded-xl lg:w-[364px] lg:max-h-[490px]">
-                  <div className=" flex flex-col gap-4 justify-center px-7 pt-[112px] pb-7 text-left lg:px-8 lg:pb-14 lg:pt-[136px] lg:gap-6">
-                    <p>
-                      Purus maecenas quis elit eu, aliquet. Tellus porttitor ut
-                      sollicitudin sit non fringilla. Quam nunc volutpat
-                      senectus neque eget amet pharetra, euismod. Tempus, nunc,
-                      molestie imperdiet curabitur commodo euismod.
-                    </p>
-                    <figure className="flex items-center gap-4">
-                      <Image
-                        src={Avatar}
-                        alt="Rwanda Melfor"
-                        className="rounded-full flex items-center justify-center h-16 w-16 object-center object-cover"
-                      />
-                      <figcaption>
-                        <h2 className="text-lg text-[#0F172A]">
-                          Rwanda Melfor
-                        </h2>
-                        <h3 className="text-base text-[#475569]">
-                          zerowaste.com
-                        </h3>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </CarouselItem>
-              <CarouselItem className="lg:basis-1/5">
-                <div className="bg-white w-full rounded-xl lg:w-[364px] lg:max-h-[490px]">
-                  <div className=" flex flex-col gap-4 justify-center px-7 pt-[112px] pb-7 text-left lg:px-8 lg:pb-14 lg:pt-[136px] lg:gap-6">
-                    <p>
-                      Purus maecenas quis elit eu, aliquet. Tellus porttitor ut
-                      sollicitudin sit non fringilla. Quam nunc volutpat
-                      senectus neque eget amet pharetra, euismod. Tempus, nunc,
-                      molestie imperdiet curabitur commodo euismod.
-                    </p>
-                    <figure className="flex items-center gap-4">
-                      <Image
-                        src={Avatar}
-                        alt="Rwanda Melfor"
-                        className="rounded-full flex items-center justify-center h-16 w-16 object-center object-cover"
-                      />
-                      <figcaption>
-                        <h2 className="text-lg text-[#0F172A]">
-                          Rwanda Melfor
-                        </h2>
-                        <h3 className="text-base text-[#475569]">
-                          zerowaste.com
-                        </h3>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </CarouselItem>
-              <CarouselItem className="lg:basis-1/5">
-                <div className="bg-white w-full rounded-xl lg:w-[364px] lg:max-h-[490px]">
-                  <div className=" flex flex-col gap-4 justify-center px-7 pt-[112px] pb-7 text-left lg:px-8 lg:pb-14 lg:pt-[136px] lg:gap-6">
-                    <p>
-                      Purus maecenas quis elit eu, aliquet. Tellus porttitor ut
-                      sollicitudin sit non fringilla. Quam nunc volutpat
-                      senectus neque eget amet pharetra, euismod. Tempus, nunc,
-                      molestie imperdiet curabitur commodo euismod.
-                    </p>
-                    <figure className="flex items-center gap-4">
-                      <Image
-                        src={Avatar}
-                        alt="Rwanda Melfor"
-                        className="rounded-full flex items-center justify-center h-16 w-16 object-center object-cover"
-                      />
-                      <figcaption>
-                        <h2 className="text-lg text-[#0F172A]">
-                          Rwanda Melfor
-                        </h2>
-                        <h3 className="text-base text-[#475569]">
-                          zerowaste.com
-                        </h3>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </CarouselItem>
-              <CarouselItem className="lg:basis-1/5">
-                <div className="bg-white w-full rounded-xl lg:w-[364px] lg:max-h-[490px]">
-                  <div className=" flex flex-col gap-4 justify-center px-7 pt-[112px] pb-7 text-left lg:px-8 lg:pb-14 lg:pt-[136px] lg:gap-6">
-                    <p>
-                      Purus maecenas quis elit eu, aliquet. Tellus porttitor ut
-                      sollicitudin sit non fringilla. Quam nunc volutpat
-                      senectus neque eget amet pharetra, euismod. Tempus, nunc,
-                      molestie imperdiet curabitur commodo euismod.
-                    </p>
-                    <figure className="flex items-center gap-4">
-                      <Image
-                        src={Avatar}
-                        alt="Rwanda Melfor"
-                        className="rounded-full flex items-center justify-center h-16 w-16 object-center object-cover"
-                      />
-                      <figcaption>
-                        <h2 className="text-lg text-[#0F172A]">
-                          Rwanda Melfor
-                        </h2>
-                        <h3 className="text-base text-[#475569]">
-                          zerowaste.com
-                        </h3>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </CarouselItem>
+              {mock?.map((item, index) => (
+                <CarouselItem className="lg:basis-auto" key={index}>
+                  <Card key={index} {...item} />
+                </CarouselItem>
+              ))}
             </CarouselContent>
-
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
@@ -554,7 +402,7 @@ export default function Home() {
           <div className="mt-6 flex flex-col items-center gap-4 lg:mt-0">
             <Button variant="secondary" size="lg" className="p-5">
               Request a Quote
-              <ArrowRightIcon />
+              <ArrowRightIcon className="animate-bounce" />
             </Button>
 
             <p className="text-base text-white lg:text-lg">
@@ -566,7 +414,7 @@ export default function Home() {
           <Image
             src={Macbook}
             alt="Tela de um macbook"
-            className="sticky z-30"
+            className="sticky z-30 animate-fadeIn"
           />
           <Image
             src={EllipseMobile}
@@ -578,7 +426,7 @@ export default function Home() {
           <Image
             src={Macbook}
             alt="Tela de um macbook"
-            className="sticky z-30"
+            className="sticky z-30 animate-fadeIn"
           />
           <Image
             src={Ellipse1Desktop}

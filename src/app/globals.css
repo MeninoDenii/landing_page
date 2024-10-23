@@ -12,6 +12,28 @@ body {
   }
 }
 
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(50, end), blink 10s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-right: 0.15em solid transparent;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
