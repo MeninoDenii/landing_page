@@ -3,13 +3,23 @@ import { Headphones } from "lucide-react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card } from "@/components/Card/Card";
+import Link from "next/link";
+import { mock } from "@/lib/mock";
+
 import Avatar from "@/img/avatar.png";
 import Desktop from "@/img/desktop.svg";
 import Ellipse14 from "@/img/ellipse_14.svg";
 import Ellipse15 from "@/img/ellipse_15.svg";
 import Rectangle from "@/img/rectangle_16.svg";
 import Mobile from "@/img/placeholder_mobile.svg";
-import RectangleYellow from "@/img/rectangle_yelllow.svg";
 import PlaceholderMobile from "@/img/mobile_placeholder.svg";
 import Logo from "@/img/logo.svg";
 import EllipseMobile from "@/img/ellipse_mobile.svg";
@@ -22,16 +32,7 @@ import ScreenDesktop from "@/img/screen_desktop.svg";
 import Ellipse14Desktop from "@/img/ellipse_14_desktop.svg";
 import Ellipse15Desktop from "@/img/ellipse_15_desktop.svg";
 import Ellipse1Desktop from "@/img/ellipse_1_desktop.svg";
-import Link from "next/link";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card } from "@/components/Card/Card";
-import { mock } from "@/lib/mock";
+import Ellipse16Mobile from "@/img/ellipse_16_mobile.svg";
 
 export default function Home() {
   return (
@@ -156,43 +157,43 @@ export default function Home() {
         <div className="lg:hidden">
           <Image
             src={Ellipse14}
-            alt="Ellipse Amarela"
-            className="absolute top-[170px]"
+            alt="Ellipse Yellow"
+            className="absolute top-[90%]"
           />
           <Image
             src={Desktop}
-            alt="Desktop"
+            alt="Desktop Screen"
             className="absolute mt-16 z-50 animate-fadeIn"
           />
           <Image
             src={Ellipse15}
-            alt="Ellipse lilás"
+            alt="Ellipse Purple"
             className="absolute right-0 top-64"
           />
         </div>
 
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex lg:justify-center lg:items-center">
           <Image
             src={Ellipse14Desktop}
-            alt="Ellipse Amarela"
-            className="absolute top-40"
+            alt="Ellipse Yellow"
+            className="absolute top-40 left-0"
           />
           <Image
             src={ScreenDesktop}
-            alt="Desktop"
-            className="absolute mt-20 z-50 flex left-32 animate-fadeIn"
+            alt="Desktop Screen"
+            className="relative mt-20 z-50 flex  animate-fadeIn"
           />
 
           <Image
             src={Ellipse15Desktop}
-            alt="Ellipse lilás"
-            className="absolute right-0 top-[315px]"
+            alt="Ellipse Purple"
+            className="absolute right-0 bottom-[20%]"
           />
         </div>
       </section>
 
       {/* Third Section */}
-      <section className="mt-96 text-center lg:mt-[1000px] lg:flex items-start lg:flex-row-reverse lg:text-start lg:gap-[71px]  lg:items-center lg:justify-start lg:pb-20 ">
+      <section className="mt-96 text-center lg:mt-20 lg:flex items-start lg:flex-row-reverse lg:text-start lg:gap-[71px]  lg:items-center lg:justify-start lg:pb-20 ">
         <div className="px-4 lg:px-0 lg:flex lg:items-start lg:flex-col  lg:w-[75%]">
           <div>
             <h2 className="text-base font-semibold text-[#D97706] lg:text-xl">
@@ -259,15 +260,15 @@ export default function Home() {
         <div className="flex relative lg:sticky lg:w-[25%]">
           <Image
             src={Rectangle}
-            alt="Rectangle"
+            alt="Rectangle Purple"
             className="mt-[23px] relative lg:mt-0"
           />
           <Image
             src={Mobile}
-            alt="Mobile"
+            alt="Mobile Placeholder"
             width={220}
             height={471}
-            className="absolute top-16 right-20 lg:top-14 lg:left-20 lg:right-0"
+            className="absolute top-[10%] right-[25%] lg:top-[5%] lg:left-[15%] lg:right-0"
           />
         </div>
       </section>
@@ -336,21 +337,20 @@ export default function Home() {
         </div>
         <div className="flex relative pl-9">
           <Image
-            src={RectangleYellow}
-            alt="Rectangle"
-            width={600}
-            className="mt-[23px] relative "
+            src={Ellipse16Mobile}
+            alt="Rectangle Purple"
+            className="mt-[23px] relative"
           />
           <Image
             src={PlaceholderMobile}
-            alt="Mobile"
-            className="absolute right-20 w-[228px] bottom-0 lg:top-4 lg:left-14 lg:right-0 lg:w-[420px]"
+            alt="Mobile Placeholder"
+            className="absolute right-[25%] w-[228px] bottom-0 lg:top-[12%] lg:right-[10%]"
           />
         </div>
       </section>
 
       {/* Fifth Section */}
-      <section className="mt-12 bg-[#581C87] flex flex-col items-center justify-center text-center px-4 pt-12 pb-16">
+      <section className="mt-12 bg-[#581C87] flex flex-col items-center justify-center text-center px-4 pt-12 pb-16 lg:mt-20">
         <div className="flex flex-col items-center lg:flex-row lg:w-full lg:justify-between lg:px-20">
           <div className="mb-6 lg:text-start">
             <h2 className="text-base font-semibold text-[#FCD34D] lg:text-xl">
@@ -413,24 +413,24 @@ export default function Home() {
         <div className="mt-16 lg:hidden">
           <Image
             src={Macbook}
-            alt="Tela de um macbook"
+            alt="Mackbook Screen"
             className="sticky z-30 animate-fadeIn"
           />
           <Image
             src={EllipseMobile}
-            alt="Ellipse"
+            alt="Ellipse Mobile"
             className="absolute bottom-0"
           />
         </div>
         <div className="hidden lg:block lg:mt-20">
           <Image
             src={Macbook}
-            alt="Tela de um macbook"
+            alt="Mackbook Screen"
             className="sticky z-30 animate-fadeIn"
           />
           <Image
             src={Ellipse1Desktop}
-            alt="Ellipse"
+            alt="Ellipse Desktop"
             className="absolute top-0 right-0"
           />
         </div>
@@ -438,7 +438,7 @@ export default function Home() {
 
       <footer className="flex items-center justify-center flex-col py-6 px-4 gap-6 lg:flex-row lg:justify-between lg:px-20">
         <div className="flex items-center gap-6 flex-col lg:flex-row">
-          <Image src={Logo} alt="Logo" />
+          <Image src={Logo} alt="Soller logo" />
           <span>@ 2023 Soller, Inc. All rights reserved.</span>
         </div>
         <div className="flex items-center gap-6">
