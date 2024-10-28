@@ -9,3 +9,10 @@ O projeto consiste em uma landing page desenvolvida com Next.js, TailwindCSS e s
 ## 🚀 Como rodar o projeto localmente e Deploy
 
 Para rodar o projeto localmente basta clonar o respositório usando este comando: git@github.com:MeninoDenii/landing_page.git em seguida usar o comando yarn ou npm para instalar as dependências do projeto e por último utilizar o comando yarn dev ou npm dev para rodar o projeto localmente. O site estará hospedado na netlify e se encontra nesta URL: https://landing-page-hazel-theta-87.vercel.app/.
+
+## ✔️ Tecnologias Utilizadas
+
+- [NextJS](https://nextjs.org/docs)
+- [Typescript](https://www.typescriptlang.org/pt/docs/handbook/jsx.html)
+- [TailwindCSS](https://tailwindcss.com/docs/installation)
+- [shadcn](https://ui.shadcn.com/)
